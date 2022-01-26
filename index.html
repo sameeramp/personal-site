@@ -900,7 +900,8 @@
 
 		function nameValidation() {
 			var name = document.getElementById("firstName").value;
-			var pattern = /^[a-zA-Z\\s]/;
+			//var pattern = /^[a-zA-Z\\s]/;
+			var pattern = /^[^-\s][a-zA-Z ]+$/
 
 			if (name == "") {
 				$("#errorMsg").html("Name is madotary");
@@ -909,7 +910,7 @@
 				$("#errorMsg").html("")
 				return true;
 			} else {
-				$("#errorMsg").html("NUMBER NOT VALID");
+				$("#errorMsg").html("Enter a Valid Name");
 				return false;
 			}
 		}
